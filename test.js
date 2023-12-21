@@ -1,5 +1,5 @@
-//testing of the js file
-const assert = require('assert')
-const app = require('./app')
+// test.js
+const assert = require('assert');
+const app = require('./app');
 
-assert.strictEqual(app.sayhello(),'Hello World');
+assert.strictEqual(app.sayHello(), 'Hello, World!');

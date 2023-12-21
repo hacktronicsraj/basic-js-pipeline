@@ -1,6 +1,7 @@
-function sayhello(){
-    return "Hello World"
-
+function sayHello() {
+    return "Hello, World!";
 }
 
-console.log(sayhello())
+module.exports = {
+    sayHello: sayHello
+};

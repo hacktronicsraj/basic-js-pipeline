@@ -1,0 +1,27 @@
+name: basicyaml
+
+on:
+  push:
+     branches:
+         - master
+
+jobs:
+   build:
+     runs-on: ubuntu-latest
+
+     steps:
+     - name: Checkout Repo
+       uses: actions/checkout@v2
+
+
+     - name: set up node.js
+       uses: actions/setup-node@v3
+       with:
+        node-version: '14'
+
+     - name: install necessary packages
+        run: npm install
+
+     - name: run the test
+        run: npm test
+        

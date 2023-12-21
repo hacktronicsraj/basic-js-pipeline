@@ -1,7 +1,6 @@
 function sayhello(){
-    return sayhello
+    return "Hello World"
 
 }
 
 console.log(sayhello())
-

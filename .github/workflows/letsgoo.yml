@@ -26,6 +26,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -37,7 +38,7 @@ jobs:
       - name: Build, tag, and push image to DockerHub
         env:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-          IMAGE_NAME: simple-js-pipeline-app
+          IMAGE_NAME: my-image
         run: |
           docker build -t $DOCKERHUB_USERNAME/$IMAGE_NAME .
           docker push $DOCKERHUB_USERNAME/$IMAGE_NAME:latest

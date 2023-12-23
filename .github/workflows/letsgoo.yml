@@ -41,4 +41,4 @@ jobs:
           IMAGE_NAME: my-image
         run: |
           docker build -t $DOCKERHUB_USERNAME/$IMAGE_NAME .
-          ls
+          docker push $DOCKERHUB_USERNAME/$IMAGE_NAME:latest

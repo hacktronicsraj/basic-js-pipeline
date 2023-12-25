@@ -59,8 +59,8 @@ jobs:
         run: npm install
 
       - name: Send Email
-        run: node sendEmail.js
+        run: node emailsender.js
         env:
-          TO_EMAIL: your@email.com
+          TO_EMAIL: ${{ secrets.TO_EMAIL }}
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
